@@ -1,27 +1,53 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import Header from './components/Header';
+import Preloader from './components/Preloader';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 
-const queryClient = new QueryClient();
+const App = () => {
+  const [loading, setLoading] = useState(true);
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); // 2.5 seconds for the full preloader experience
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <Preloader key="preloader" />
+        ) : (
+          <div key="main-content">
+            <Header />
+            <main>
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
+            </main>
+            
+            {/* Footer */}
+            <footer className="bg-card border-t border-border py-8">
+              <div className="container mx-auto px-6 text-center">
+                <p className="font-inter text-muted-foreground">
+                  © 2024 Project Apex. Built for speed, designed for performance.
+                </p>
+              </div>
+            </footer>
+          </div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 export default App;
