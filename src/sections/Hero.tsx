@@ -74,10 +74,76 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="font-titillium font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight"
+          className="font-titillium font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight relative overflow-hidden"
         >
-          <span className="block">ALEX</span>
-          <span className="block text-primary">RACER</span>
+          {/* F1 Car Animation */}
+          <motion.div
+            className="absolute inset-0 z-10 pointer-events-none"
+            initial={{ x: "100vw" }}
+            animate={{ x: "-100vw" }}
+            transition={{ 
+              duration: 2, 
+              ease: "easeInOut",
+              delay: 0.5 
+            }}
+          >
+            <img 
+              src="/lovable-uploads/65fc1b19-7087-4cd1-a7a7-cf292497a82b.png" 
+              alt="F1 Car"
+              className="h-32 md:h-48 lg:h-56 w-auto object-contain opacity-90"
+            />
+          </motion.div>
+
+          {/* Name with staggered reveal */}
+          <div className="relative z-20">
+            <motion.span 
+              className="block overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+            >
+              {["S", "A", "H", "I", "L"].map((letter, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ 
+                    delay: 1.3 + index * 0.1, 
+                    duration: 0.6,
+                    type: "spring",
+                    damping: 12
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.span>
+            
+            <motion.span 
+              className="block text-primary overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.5 }}
+            >
+              {["S", "H", "A", "R", "M", "A"].map((letter, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ 
+                    delay: 1.9 + index * 0.1, 
+                    duration: 0.6,
+                    type: "spring",
+                    damping: 12
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.span>
+          </div>
         </motion.h1>
 
         <motion.p
