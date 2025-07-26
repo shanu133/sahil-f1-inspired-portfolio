@@ -105,7 +105,23 @@ const Hero = () => {
               {["S", "A", "H", "I", "L"].map((letter, index) => (
                 <motion.span
                   key={index}
-                  className="inline-block"
+                  className="inline-block relative"
+                  style={{
+                    background: `
+                      repeating-conic-gradient(
+                        from 0deg at 50% 50%,
+                        #ffffff 0deg 90deg,
+                        #000000 90deg 180deg,
+                        #ffffff 180deg 270deg,
+                        #000000 270deg 360deg
+                      )
+                    `,
+                    backgroundSize: '40px 40px',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    color: 'transparent'
+                  }}
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ 
