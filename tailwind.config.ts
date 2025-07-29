@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'titillium': ['Titillium Web', 'sans-serif'],
-				'inter': ['Inter', 'sans-serif'],
+				'heading': ['Orbitron', 'sans-serif'],
+				'body': ['Roboto', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

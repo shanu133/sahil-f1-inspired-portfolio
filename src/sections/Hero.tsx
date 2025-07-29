@@ -79,14 +79,14 @@ const Hero = () => {
           variants={itemVariants}
           className="mb-6"
         >
-          <span className="font-inter text-primary font-medium text-lg tracking-wider">
+          <span className="font-body text-primary font-medium text-lg tracking-[1.5px]">
             WELCOME TO THE GRID
           </span>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="font-titillium font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight"
+          className="font-heading font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight tracking-[1.5px]"
         >
           <span className="block">SAHIL</span>
           <span className="block text-primary">SHARMA</span>
@@ -94,7 +94,7 @@ const Hero = () => {
 
         <motion.p
           variants={itemVariants}
-          className="font-inter text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="font-body text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
         >
           Full-Stack Developer & Performance Engineer
           <br />
@@ -106,7 +106,7 @@ const Hero = () => {
           className="flex flex-col md:flex-row gap-4 justify-center items-center mb-16"
         >
           <motion.button
-            className="px-8 py-4 bg-primary text-primary-foreground font-inter font-semibold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-primary)]"
+            className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-primary)] tracking-[1.5px]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -114,7 +114,7 @@ const Hero = () => {
           </motion.button>
           
           <motion.button
-            className="px-8 py-4 border-2 border-primary text-primary font-inter font-semibold text-lg rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="px-8 py-4 border-2 border-primary text-primary font-body font-semibold text-lg rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

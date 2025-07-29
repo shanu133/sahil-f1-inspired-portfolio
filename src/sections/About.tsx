@@ -17,6 +17,24 @@ const About = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const carVariants = {
+    hidden: { 
+      opacity: 0, 
+      x: -100, 
+      scale: 0.8 
+    },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      scale: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeOut",
+        delay: 0.5
+      }
+    },
+  };
+
   const stats = [
     { icon: Code, label: "Projects Completed", value: "50+" },
     { icon: Zap, label: "Years Experience", value: "5+" },
@@ -34,24 +52,22 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="font-inter text-primary font-medium text-lg tracking-wider mb-4 block">
-              ABOUT THE DRIVER
+            <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
+              <span className="text-primary">01 //</span> DRIVER PROFILE
             </span>
-            <h2 className="font-titillium font-black text-4xl md:text-6xl text-foreground mb-6">
+            <h2 className="font-heading font-black text-4xl md:text-6xl text-foreground mb-6 tracking-[1.5px]">
               PERFORMANCE PROFILE
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div variants={itemVariants}>
+          <div className="grid lg:grid-cols-2 gap-12 items-center relative overflow-hidden">
+            <motion.div variants={itemVariants} className="z-10">
               <div className="space-y-6">
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                  Like a Formula 1 driver pushing the limits on every corner, I approach 
-                  development with precision, speed, and an obsession for performance. 
-                  Every line of code is optimized for maximum efficiency.
+                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                  A passionate and driven final-year Computer Science Engineering student with a deep-seated love for building efficient, high-performance software solutions. My approach to development mirrors the precision and focus of a race engineer, meticulously architecting systems that are both robust and scalable.
                 </p>
                 
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
+                <p className="font-body text-lg text-muted-foreground leading-relaxed">
                   My engineering philosophy combines the methodical approach of a race 
                   engineer with the creative problem-solving of a championship driver. 
                   From React frontends to Node.js backends, I build solutions that 
@@ -59,7 +75,7 @@ const About = () => {
                 </p>
 
                 <div className="pt-6">
-                  <h3 className="font-titillium font-bold text-2xl text-foreground mb-4">
+                  <h3 className="font-heading font-bold text-2xl text-foreground mb-4 tracking-[1.5px]">
                     CORE EXPERTISE
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
@@ -80,12 +96,27 @@ const About = () => {
                         viewport={{ once: true }}
                       >
                         <div className="w-2 h-2 bg-primary rounded-full" />
-                        <span className="font-inter text-muted-foreground">{skill}</span>
+                        <span className="font-body text-muted-foreground">{skill}</span>
                       </motion.div>
                     ))}
                   </div>
                 </div>
               </div>
+            </motion.div>
+
+            {/* Ferrari F1 Car Animation */}
+            <motion.div 
+              initial={{ opacity: 0, x: -100, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+              viewport={{ once: true }}
+              className="relative lg:absolute lg:right-0 lg:-mr-24 lg:top-1/2 lg:-translate-y-1/2"
+            >
+              <img 
+                src="/lovable-uploads/0462a144-0ac3-4b88-b9fd-d4abf7e3e187.png"
+                alt="Ferrari F1 Car" 
+                className="max-w-lg mx-auto w-full h-auto object-contain"
+              />
             </motion.div>
 
             <motion.div variants={itemVariants} className="grid grid-cols-2 gap-6">
@@ -103,10 +134,10 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="font-titillium font-black text-3xl text-foreground mb-2">
+                  <div className="font-heading font-black text-3xl text-foreground mb-2">
                     {stat.value}
                   </div>
-                  <div className="font-inter text-sm text-muted-foreground">
+                  <div className="font-body text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </motion.div>
