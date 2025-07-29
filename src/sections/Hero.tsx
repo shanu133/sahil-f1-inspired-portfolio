@@ -20,6 +20,18 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Ferrari F1 Car Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/17841f48-33d8-4841-ab4f-e6add1db9ba4.png')`,
+          backgroundBlendMode: 'luminosity'
+        }}
+      />
+      
+      {/* Semi-transparent black overlay */}
+      <div className="absolute inset-0 bg-black opacity-60" />
+      
       {/* Background grid pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -76,8 +88,8 @@ const Hero = () => {
           variants={itemVariants}
           className="font-titillium font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight"
         >
-          <span className="block">ALEX</span>
-          <span className="block text-primary">RACER</span>
+          <span className="block">SAHIL</span>
+          <span className="block text-primary">SHARMA</span>
         </motion.h1>
 
         <motion.p
