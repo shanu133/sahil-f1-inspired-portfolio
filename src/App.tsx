@@ -38,7 +38,7 @@ const App = () => {
             {/* Footer */}
             <footer className="bg-card border-t border-border py-8">
               <div className="container mx-auto px-6 text-center">
-                <p className="font-inter text-muted-foreground">
+                <p className="font-body text-muted-foreground">
                   © 2024 Project Apex. Built for speed, designed for performance.
                 </p>
               </div>

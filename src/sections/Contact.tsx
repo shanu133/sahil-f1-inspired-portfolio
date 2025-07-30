@@ -68,13 +68,13 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="font-inter text-primary font-medium text-lg tracking-wider mb-4 block">
-              CHECKERED FLAG
+            <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
+              <span className="text-primary">04 //</span> CHECKERED FLAG
             </span>
-            <h2 className="font-titillium font-black text-4xl md:text-6xl text-foreground mb-6">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
               LET'S COLLABORATE
             </h2>
-            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to build something extraordinary? Let's discuss your project 
               and cross the finish line together.
             </p>
@@ -82,7 +82,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <motion.div variants={itemVariants}>
-              <h3 className="font-titillium font-bold text-2xl text-foreground mb-8">
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 tracking-[1.5px]">
                 GET IN TOUCH
               </h3>
               
@@ -102,10 +102,10 @@ const Contact = () => {
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <div className="font-inter font-medium text-foreground">
+                      <div className="font-body font-medium text-foreground">
                         {info.label}
                       </div>
-                      <div className="font-inter text-muted-foreground">
+                      <div className="font-body text-muted-foreground">
                         {info.value}
                       </div>
                     </div>
@@ -114,13 +114,13 @@ const Contact = () => {
               </div>
 
               <div className="p-6 bg-gradient-to-r from-primary/10 to-red-400/10 border border-primary/20 rounded-lg">
-                <h4 className="font-titillium font-bold text-xl text-foreground mb-3">
+                <h4 className="font-heading font-bold text-xl text-foreground mb-3 tracking-[1.5px]">
                   RESPONSE TIME
                 </h4>
-                <p className="font-inter text-muted-foreground mb-2">
+                <p className="font-body text-muted-foreground mb-2">
                   Average response time: <span className="text-primary font-semibold">2-4 hours</span>
                 </p>
-                <p className="font-inter text-sm text-muted-foreground">
+                <p className="font-body text-sm text-muted-foreground">
                   I treat every project like a race - speed and precision are everything.
                 </p>
               </div>
@@ -129,7 +129,7 @@ const Contact = () => {
             <motion.div variants={itemVariants}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block font-inter font-medium text-foreground mb-2">
+                  <label className="block font-body font-medium text-foreground mb-2">
                     NAME
                   </label>
                   <motion.input
@@ -145,7 +145,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block font-inter font-medium text-foreground mb-2">
+                  <label className="block font-body font-medium text-foreground mb-2">
                     EMAIL
                   </label>
                   <motion.input
@@ -161,7 +161,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block font-inter font-medium text-foreground mb-2">
+                  <label className="block font-body font-medium text-foreground mb-2">
                     MESSAGE
                   </label>
                   <motion.textarea
@@ -178,7 +178,7 @@ const Contact = () => {
 
                 <motion.button
                   type="submit"
-                  className="w-full px-8 py-4 bg-primary text-primary-foreground font-inter font-semibold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 group"
+                  className="w-full px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 group tracking-[1.5px]"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >

@@ -51,13 +51,13 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="font-inter text-primary font-medium text-lg tracking-wider mb-4 block">
-              TECHNICAL SPECIFICATIONS
+            <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
+              <span className="text-primary">02 //</span> TECHNICAL SPECIFICATIONS
             </span>
-            <h2 className="font-titillium font-black text-4xl md:text-6xl text-foreground mb-6">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
               PERFORMANCE METRICS
             </h2>
-            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
               Like a Formula 1 car's telemetry data, here are my technical capabilities 
               measured in precision and performance.
             </p>
@@ -65,7 +65,7 @@ const Skills = () => {
 
           <div className="grid lg:grid-cols-3 gap-12">
             <motion.div variants={itemVariants}>
-              <h3 className="font-titillium font-bold text-2xl text-foreground mb-8 text-center">
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 text-center tracking-[1.5px]">
                 FRONTEND
               </h3>
               <div className="bg-card border border-border rounded-lg p-6">
@@ -81,7 +81,7 @@ const Skills = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="font-titillium font-bold text-2xl text-foreground mb-8 text-center">
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 text-center tracking-[1.5px]">
                 BACKEND
               </h3>
               <div className="bg-card border border-border rounded-lg p-6">
@@ -97,7 +97,7 @@ const Skills = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="font-titillium font-bold text-2xl text-foreground mb-8 text-center">
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 text-center tracking-[1.5px]">
                 TOOLS & DEPLOYMENT
               </h3>
               <div className="bg-card border border-border rounded-lg p-6">

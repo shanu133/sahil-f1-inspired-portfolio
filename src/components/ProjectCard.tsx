@@ -80,11 +80,11 @@ const ProjectCard = ({
       </div>
 
       <div className="p-6">
-        <h3 className="font-titillium font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
+        <h3 className="font-heading font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors tracking-[1.5px]">
           {title}
         </h3>
         
-        <p className="font-inter text-muted-foreground mb-4 leading-relaxed">
+        <p className="font-body text-muted-foreground mb-4 leading-relaxed">
           {description}
         </p>
 
@@ -92,7 +92,7 @@ const ProjectCard = ({
           {technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-muted text-muted-foreground font-inter text-sm rounded-full border border-border group-hover:border-primary/30 transition-colors"
+              className="px-3 py-1 bg-muted text-muted-foreground font-body text-sm rounded-full border border-border group-hover:border-primary/30 transition-colors"
             >
               {tech}
             </span>

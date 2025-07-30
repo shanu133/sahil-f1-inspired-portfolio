@@ -72,13 +72,13 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="font-inter text-primary font-medium text-lg tracking-wider mb-4 block">
-              RACE VICTORIES
+            <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
+              <span className="text-primary">03 //</span> RACE VICTORIES
             </span>
-            <h2 className="font-titillium font-black text-4xl md:text-6xl text-foreground mb-6">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
               PROJECT SHOWCASE
             </h2>
-            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
               Each project represents a victory lap in my development journey. 
               Built for speed, designed for performance, engineered for excellence.
             </p>
@@ -103,7 +103,7 @@ const Projects = () => {
             className="text-center mt-12"
           >
             <motion.button
-              className="px-8 py-4 border-2 border-primary text-primary font-inter font-semibold text-lg rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="px-8 py-4 border-2 border-primary text-primary font-body font-semibold text-lg rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px]"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

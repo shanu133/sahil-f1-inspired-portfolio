@@ -18,6 +18,18 @@ const Hero = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const parallaxVariants = {
+    hidden: { opacity: 0, y: 100, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    },
+  };
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Video Background */}
@@ -26,18 +38,18 @@ const Hero = () => {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/path-to-your-video.mp4" type="video/mp4" />
+        <source src="/sf 25 intro low.mp4" type="video/mp4" />
         {/* Fallback for browsers that don't support video */}
         Your browser does not support the video tag.
       </video>
       
       {/* Semi-transparent black overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-70" />
+      <div className="absolute inset-0 bg-black/70 z-10" />
       
       {/* Background grid pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 z-20">
         <div 
           className="w-full h-full"
           style={{
@@ -51,7 +63,7 @@ const Hero = () => {
       </div>
 
       {/* Animated background elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-20">
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
@@ -74,7 +86,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="container mx-auto px-6 text-center relative z-10"
+        className="container mx-auto px-6 text-center relative z-30"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -83,22 +95,38 @@ const Hero = () => {
           variants={itemVariants}
           className="mb-6"
         >
-          <span className="font-body text-primary font-medium text-lg tracking-[1.5px]">
-            WELCOME TO THE GRID
+          <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
+            <span className="text-primary">00 //</span> WELCOME TO THE GRID
           </span>
         </motion.div>
 
-        <motion.h1
-          variants={itemVariants}
-          className="font-heading font-black text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight tracking-[1.5px]"
-        >
-          <span className="block">SAHIL</span>
-          <span className="block text-primary">SHARMA</span>
-        </motion.h1>
+        <div className="mb-6">
+          <motion.h1
+            variants={parallaxVariants}
+            className="font-heading font-black text-6xl md:text-8xl lg:text-9xl text-foreground leading-tight tracking-[1.5px]"
+          >
+            <motion.span 
+              className="block"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+            >
+              SAHIL
+            </motion.span>
+            <motion.span 
+              className="block text-primary"
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+            >
+              SHARMA
+            </motion.span>
+          </motion.h1>
+        </div>
 
         <motion.p
           variants={itemVariants}
-          className="font-body text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="font-body text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           Full-Stack Developer & Performance Engineer
           <br />
@@ -107,10 +135,10 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col md:flex-row gap-4 justify-center items-center mb-16"
+          className="flex flex-col md:flex-row gap-4 justify-center items-center mb-20"
         >
           <motion.button
-            className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-primary)] tracking-[1.5px]"
+            className="px-6 py-3 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-primary)] tracking-[1.5px]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -118,7 +146,7 @@ const Hero = () => {
           </motion.button>
           
           <motion.button
-            className="px-8 py-4 border-2 border-primary text-primary font-body font-semibold text-lg rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px]"
+            className="px-6 py-3 border-2 border-primary text-primary font-body font-semibold text-sm rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

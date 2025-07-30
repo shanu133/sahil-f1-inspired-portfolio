@@ -35,7 +35,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="font-titillium font-black text-2xl text-foreground"
+            className="font-heading font-black text-2xl text-foreground tracking-[1.5px]"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -47,7 +47,7 @@ const Header = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="font-inter font-medium text-sm text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="font-body font-medium text-sm text-muted-foreground hover:text-primary transition-colors duration-300 relative group tracking-[1.5px]"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}

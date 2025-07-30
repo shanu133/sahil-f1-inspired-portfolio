@@ -16,8 +16,8 @@ const SkillBar = ({ skill, percentage, index }: SkillBarProps) => {
       viewport={{ once: true }}
     >
       <div className="flex justify-between items-center mb-2">
-        <span className="font-inter font-medium text-foreground">{skill}</span>
-        <span className="font-titillium font-bold text-primary">{percentage}%</span>
+        <span className="font-body font-medium text-foreground">{skill}</span>
+        <span className="font-heading font-bold text-primary">{percentage}%</span>
       </div>
       
       <div className="relative h-3 bg-muted rounded-full overflow-hidden">
