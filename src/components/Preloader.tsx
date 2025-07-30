@@ -2,24 +2,25 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const Preloader = () => {
-  const [currentLight, setCurrentLight] = useState(0);
+  const [currentPair, setCurrentPair] = useState(-1);
   const [allLightsOn, setAllLightsOn] = useState(false);
-  const [lightsOut, setLightsOut] = useState(false);
+  const [lightsOff, setLightsOff] = useState(false);
 
   useEffect(() => {
     const sequence = async () => {
-      // F1 Starting sequence - lights on one by one
-      for (let i = 1; i <= 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 800));
-        setCurrentLight(i);
+      // Light up pairs sequentially
+      for (let i = 0; i < 5; i++) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setCurrentPair(i);
       }
       
-      // Hold all lights for a moment
       setAllLightsOn(true);
-      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // LIGHTS OUT! - All lights turn off simultaneously
-      setLightsOut(true);
+      // Random delay before turning off (0.5s to 3s)
+      const randomDelay = Math.random() * 2500 + 500;
+      await new Promise(resolve => setTimeout(resolve, randomDelay));
+      
+      setLightsOff(true);
     };
 
     sequence();
@@ -30,9 +31,16 @@ const Preloader = () => {
     visible: { opacity: 1 },
     exit: {
       opacity: 0,
-      scale: 0.95,
-      transition: { duration: 0.8 },
+      transition: { duration: 0.5 },
     },
+  };
+
+  const getLightStatus = (index: number) => {
+    const pairIndex = index < 5 ? index : index - 5;
+    
+    if (lightsOff) return 'off';
+    if (allLightsOn || currentPair >= pairIndex) return 'on';
+    return 'off';
   };
 
   return (
@@ -43,77 +51,37 @@ const Preloader = () => {
       animate="visible"
       exit="exit"
     >
-      {/* Scuderia Ferrari Branding */}
-      <div className="text-center mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <h1 className="font-heading text-5xl md:text-7xl text-white mb-2 tracking-[2px]">
-            SCUDERIA
-          </h1>
-          <h1 className="font-heading text-5xl md:text-7xl text-primary mb-6 tracking-[2px]">
-            FERRARI
-          </h1>
-          <p className="font-f1 text-muted-foreground text-lg tracking-[3px]">
-            PORTFOLIO SYSTEMS ONLINE
-          </p>
-        </motion.div>
+      <div className="text-center mb-12">
+        <h1 className="font-heading font-black text-4xl md:text-6xl text-white mb-4 tracking-[1.5px]">
+          PROJECT APEX
+        </h1>
+        <p className="font-body text-gray-400 text-lg">
+          INITIALIZING RACE SYSTEMS
+        </p>
       </div>
 
-      {/* F1 Starting Lights */}
-      <div className="flex gap-4 mb-16">
-        {[1, 2, 3, 4, 5].map((lightNumber) => (
+      {/* F1 Starting Lights - 2 rows of 5 */}
+      <div className="grid grid-rows-2 grid-cols-5 gap-x-6 gap-y-3 mb-12">
+        {[...Array(10)].map((_, index) => (
           <motion.div
-            key={lightNumber}
-            className={`w-12 h-12 md:w-16 md:h-16 rounded-full border-4 transition-all duration-200 ${
-              lightsOut 
-                ? 'bg-secondary border-muted animate-lights-off' 
-                : currentLight >= lightNumber 
-                ? 'bg-primary border-primary animate-lights-on' 
-                : 'bg-secondary border-muted'
+            key={index}
+            className={`w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-gray-600 transition-all duration-100 ${
+              getLightStatus(index) === 'on' 
+                ? 'bg-red-500 shadow-[0_0_20px_#ef4444] border-red-400' 
+                : 'bg-gray-700'
             }`}
-            style={{
-              boxShadow: lightsOut ? 'none' : currentLight >= lightNumber ? 'var(--shadow-ferrari)' : 'none'
-            }}
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ 
-              delay: 0.6 + (lightNumber * 0.1), 
-              duration: 0.5,
-              type: "spring",
-              stiffness: 100
-            }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.1 * (index % 5) }}
           />
         ))}
       </div>
 
-      {/* Status Text */}
-      <motion.div 
-        className="text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-      >
-        <p className="font-f1 text-muted-foreground text-sm tracking-[2px] uppercase">
-          {!allLightsOn && !lightsOut && 'STARTING SEQUENCE INITIATED'}
-          {allLightsOn && !lightsOut && 'ALL SYSTEMS GO - READY'}
-          {lightsOut && 'LIGHTS OUT AND AWAY WE GO!'}
+      <div className="text-center">
+        <p className="font-body text-gray-500 text-sm tracking-wider">
+          {!allLightsOn ? 'STARTING SEQUENCE' : lightsOff ? 'LIGHTS OUT!' : 'ALL SYSTEMS GO'}
         </p>
-      </motion.div>
-
-      {/* Ferrari Logo Watermark */}
-      <motion.div
-        className="absolute bottom-8 right-8 opacity-20"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.2, scale: 1 }}
-        transition={{ delay: 2 }}
-      >
-        <div className="font-heading text-primary text-lg tracking-wider">
-          SF-25
-        </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };

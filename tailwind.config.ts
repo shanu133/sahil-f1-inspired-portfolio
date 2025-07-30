@@ -19,9 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Russo One', 'Titillium Web', 'sans-serif'],
-				'body': ['Montserrat', 'sans-serif'],
-				'f1': ['Titillium Web', 'sans-serif'],
+				'heading': ['Orbitron', 'sans-serif'],
+				'body': ['Roboto', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -75,44 +74,25 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				'lights-on': {
-					'0%': { backgroundColor: 'hsl(220 13% 18%)', boxShadow: 'none' },
-					'100%': { backgroundColor: 'hsl(0 100% 50%)', boxShadow: '0 0 30px hsl(0 100% 50%)' }
-				},
-				'lights-off': {
-					'0%': { backgroundColor: 'hsl(0 100% 50%)', boxShadow: '0 0 30px hsl(0 100% 50%)' },
-					'100%': { backgroundColor: 'hsl(220 13% 18%)', boxShadow: 'none' }
-				},
-				'ferrari-slide': {
-					'0%': { transform: 'translateX(-100%) scale(0.8)', opacity: '0' },
-					'100%': { transform: 'translateX(0) scale(1)', opacity: '1' }
-				},
-				'speed-blur': {
-					'0%': { filter: 'blur(0px)' },
-					'50%': { filter: 'blur(2px)' },
-					'100%': { filter: 'blur(0px)' }
-				},
-				'engine-rev': {
-					'0%': { transform: 'scale(1)' },
-					'50%': { transform: 'scale(1.05)' },
-					'100%': { transform: 'scale(1)' }
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'lights-on': 'lights-on 0.2s ease-out forwards',
-				'lights-off': 'lights-off 0.3s ease-out forwards',
-				'ferrari-slide': 'ferrari-slide 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-				'speed-blur': 'speed-blur 2s ease-in-out infinite',
-				'engine-rev': 'engine-rev 0.3s ease-in-out'
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
