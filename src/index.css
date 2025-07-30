@@ -8,55 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Project Apex F1 Theme */
-    --background: 0 0% 6.7%; /* #111111 */
-    --foreground: 0 0% 96%; /* #F5F5F5 */
+    /* Scuderia Ferrari F1 Theme */
+    --background: 0 0% 3%; /* Pure Carbon Fiber Black */
+    --foreground: 0 0% 100%; /* Pure White */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 96%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 0 100% 55%; /* #FF1818 */
-    --primary-foreground: 0 0% 96%;
+    --primary: 0 100% 50%; /* Ferrari Red #FF2800 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 220 13% 18%; /* Pit Lane Gray */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 53%; /* #888888 */
+    --muted: 220 13% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 0 100% 55%;
-    --accent-foreground: 0 0% 96%;
+    --accent: 51 100% 50%; /* Ferrari Yellow */
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 100% 55%;
-    --destructive-foreground: 0 0% 96%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 12%;
-    --ring: 0 100% 55%;
+    --border: 220 13% 15%;
+    --input: 220 13% 12%;
+    --ring: 0 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.3rem;
+
+    /* Ferrari F1 Design Tokens */
+    --ferrari-red: 0 100% 50%;
+    --ferrari-black: 0 0% 3%;
+    --ferrari-yellow: 51 100% 50%;
+    --pit-lane-gray: 220 13% 18%;
+    --carbon-fiber: 0 0% 3%;
+    --track-white: 0 0% 100%;
 
     /* F1 Racing Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0, 100%, 55%), hsl(15, 100%, 60%));
-    --gradient-dark: linear-gradient(135deg, hsl(0, 0%, 6.7%), hsl(0, 0%, 10%));
-    --gradient-glow: radial-gradient(circle, hsl(0, 100%, 55%, 0.3), transparent);
+    --gradient-ferrari: linear-gradient(135deg, hsl(var(--ferrari-red)), hsl(0 100% 40%));
+    --gradient-track: linear-gradient(180deg, hsl(var(--carbon-fiber)), hsl(var(--pit-lane-gray)));
+    --gradient-speed: radial-gradient(circle, hsl(var(--ferrari-red) / 0.2), transparent);
+    --gradient-podium: linear-gradient(45deg, hsl(var(--ferrari-red)), hsl(var(--ferrari-yellow)));
     
-    /* Shadows */
-    --shadow-primary: 0 0 25px hsl(0, 100%, 55%, 0.4);
-    --shadow-elevation: 0 10px 30px hsl(0, 0%, 0%, 0.5);
+    /* F1 Shadows */
+    --shadow-ferrari: 0 0 50px hsl(var(--ferrari-red) / 0.5);
+    --shadow-pit-lane: 0 10px 40px hsl(0 0% 0% / 0.8);
+    --shadow-podium: 0 20px 60px hsl(var(--ferrari-red) / 0.4);
+    --shadow-speed: 0 0 30px hsl(var(--ferrari-yellow) / 0.3);
     
     /* Sidebar tokens */
-    --sidebar-background: 0 0% 6.7%;
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 0 100% 55%;
-    --sidebar-primary-foreground: 0 0% 96%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 0 100% 55%;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 0 100% 50%;
   }
 
   .dark {
