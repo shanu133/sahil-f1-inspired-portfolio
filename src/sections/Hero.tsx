@@ -20,17 +20,21 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Ferrari F1 Car Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/17841f48-33d8-4841-ab4f-e6add1db9ba4.png')`,
-          backgroundBlendMode: 'luminosity'
-        }}
-      />
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/path-to-your-video.mp4" type="video/mp4" />
+        {/* Fallback for browsers that don't support video */}
+        Your browser does not support the video tag.
+      </video>
       
-      {/* Semi-transparent black overlay */}
-      <div className="absolute inset-0 bg-black opacity-60" />
+      {/* Semi-transparent black overlay for better text readability */}
+      <div className="absolute inset-0 bg-black opacity-70" />
       
       {/* Background grid pattern */}
       <div className="absolute inset-0 opacity-10">
