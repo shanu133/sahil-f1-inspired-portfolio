@@ -8,17 +8,16 @@ const Preloader = () => {
 
   useEffect(() => {
     const sequence = async () => {
-      // Light up pairs sequentially
+      // Light up one by one
       for (let i = 0; i < 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 800));
         setCurrentPair(i);
       }
       
       setAllLightsOn(true);
       
-      // Random delay before turning off (0.5s to 3s)
-      const randomDelay = Math.random() * 2500 + 500;
-      await new Promise(resolve => setTimeout(resolve, randomDelay));
+      // Brief pause before all lights go out simultaneously
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       setLightsOff(true);
     };
@@ -36,10 +35,8 @@ const Preloader = () => {
   };
 
   const getLightStatus = (index: number) => {
-    const pairIndex = index < 5 ? index : index - 5;
-    
     if (lightsOff) return 'off';
-    if (allLightsOn || currentPair >= pairIndex) return 'on';
+    if (allLightsOn || currentPair >= index) return 'on';
     return 'off';
   };
 
@@ -51,35 +48,26 @@ const Preloader = () => {
       animate="visible"
       exit="exit"
     >
-      <div className="text-center mb-12">
-        <h1 className="font-heading font-black text-4xl md:text-6xl text-white mb-4 tracking-[1.5px]">
-          PROJECT APEX
-        </h1>
-        <p className="font-body text-gray-400 text-lg">
-          INITIALIZING RACE SYSTEMS
-        </p>
-      </div>
-
-      {/* F1 Starting Lights - 2 rows of 5 */}
-      <div className="grid grid-rows-2 grid-cols-5 gap-x-6 gap-y-3 mb-12">
-        {[...Array(10)].map((_, index) => (
+      {/* F1 Starting Lights - Single row of 5 */}
+      <div className="flex gap-8 mb-8">
+        {[...Array(5)].map((_, index) => (
           <motion.div
             key={index}
-            className={`w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-gray-600 transition-all duration-100 ${
+            className={`w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-gray-600 transition-all duration-200 ${
               getLightStatus(index) === 'on' 
-                ? 'bg-red-500 shadow-[0_0_20px_#ef4444] border-red-400' 
+                ? 'bg-yellow-400 shadow-[0_0_30px_#fbbf24] border-yellow-300' 
                 : 'bg-gray-700'
             }`}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.1 * (index % 5) }}
+            transition={{ delay: 0.2 * index }}
           />
         ))}
       </div>
 
       <div className="text-center">
-        <p className="font-body text-gray-500 text-sm tracking-wider">
-          {!allLightsOn ? 'STARTING SEQUENCE' : lightsOff ? 'LIGHTS OUT!' : 'ALL SYSTEMS GO'}
+        <p className="font-body text-white text-xl tracking-wider font-bold">
+          {!allLightsOn ? 'STARTING SEQUENCE' : lightsOff ? 'LIGHTS OUT AND AWAY WE GO...' : 'ALL LIGHTS ON'}
         </p>
       </div>
     </motion.div>

@@ -26,7 +26,7 @@ const Hero = () => {
       scale: 1,
       transition: {
         duration: 1.2,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: "easeOut"
       }
     },
   };
@@ -102,7 +102,9 @@ const Hero = () => {
 
         <div className="mb-6">
           <motion.h1
-            variants={parallaxVariants}
+            initial={{ opacity: 0, y: 100, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="font-heading font-black text-6xl md:text-8xl lg:text-9xl text-foreground leading-tight tracking-[1.5px]"
           >
             <motion.span 
