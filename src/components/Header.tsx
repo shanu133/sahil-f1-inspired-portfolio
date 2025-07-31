@@ -11,11 +11,23 @@ const Header = () => {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Left side - Navigation sections */}
+        {/* Left side - SS and F1 logo */}
+        <div className="flex items-center gap-4">
+          <img 
+            src="/lovable-uploads/17841f48-33d8-4841-ab4f-e6add1db9ba4.png" 
+            alt="SS Logo" 
+            className="h-8 w-auto"
+          />
+          <div className="h-6 w-px bg-border"></div>
+          <img 
+            src="/ferrari logo.png" 
+            alt="F1 Logo" 
+            className="h-6 w-auto"
+          />
+        </div>
+        
+        {/* Right side - Navigation sections */}
         <div className="flex items-center gap-8">
-          <div className="font-heading font-bold text-xl text-foreground tracking-wider">
-            SAHIL SHARMA
-          </div>
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a 
@@ -27,17 +39,6 @@ const Header = () => {
               </a>
             ))}
           </nav>
-        </div>
-        
-        {/* Right side - SS and F1 logo */}
-        <div className="flex items-center gap-4">
-          <div className="text-primary font-heading font-bold text-xl tracking-wider">
-            SS
-          </div>
-          <div className="h-6 w-px bg-border"></div>
-          <div className="text-muted-foreground font-mono text-sm">
-            F1®
-          </div>
         </div>
       </div>
     </motion.header>

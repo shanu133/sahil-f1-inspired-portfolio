@@ -17,14 +17,14 @@ const CoreExpertise = () => {
   };
 
   const skills = [
-    "React & Next.js",
-    "Node.js & Express", 
+    "UI/UX Design",
+    "Figma & Adobe XD",
+    "React & Next.js", 
     "TypeScript",
-    "MongoDB & PostgreSQL",
-    "AWS & Docker",
+    "Framer Motion",
     "Figma",
-    "Performance Optimization",
-    "RESTful APIs"
+    "Prototyping",
+    "Design Systems"
   ];
 
   return (
@@ -41,7 +41,7 @@ const CoreExpertise = () => {
               <span className="text-primary">02 //</span> CORE EXPERTISE
             </span>
             <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
-              TECHNICAL ARSENAL
+              DESIGN TOOLKIT
             </h2>
           </motion.div>
 
