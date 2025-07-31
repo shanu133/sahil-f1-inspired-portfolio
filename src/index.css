@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clean F1 Theme - Dark charcoal with vibrant yellow */
-    --background: 216 100% 2%; /* Very dark charcoal */
+    /* Ferrari F1 Theme - Ferrari Red */
+    --background: 0 0% 5%; /* Very dark background */
     --foreground: 0 0% 98%; /* Near white */
 
-    --card: 216 50% 4%; /* Slightly lighter charcoal */
+    --card: 0 0% 8%; /* Slightly lighter dark */
     --card-foreground: 0 0% 95%;
 
-    --popover: 216 50% 4%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 50 100% 50%; /* Sharp vibrant yellow */
-    --primary-foreground: 216 100% 2%;
+    --primary: 0 100% 55%; /* Ferrari Red */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 216 30% 8%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 216 30% 8%;
-    --muted-foreground: 216 15% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 50 100% 50%;
-    --accent-foreground: 216 100% 2%;
+    --accent: 0 100% 55%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 216 30% 12%;
-    --input: 216 30% 8%;
-    --ring: 50 100% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 100% 55%;
 
     --radius: 0.5rem;
 
-    /* Clean F1 Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(50, 100%, 50%), hsl(45, 100%, 55%));
-    --gradient-background: linear-gradient(180deg, hsl(216, 100%, 2%), hsl(216, 50%, 4%));
+    /* Ferrari F1 Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0, 100%, 55%), hsl(0, 100%, 45%));
+    --gradient-background: linear-gradient(180deg, hsl(0, 0%, 5%), hsl(0, 0%, 8%));
     
-    /* Subtle shadows */
-    --shadow-primary: 0 0 30px hsl(50, 100%, 50%, 0.3);
-    --shadow-glow: 0 0 40px hsl(50, 100%, 50%, 0.4);
+    /* Ferrari red shadows */
+    --shadow-primary: 0 0 30px hsl(0, 100%, 55%, 0.3);
+    --shadow-glow: 0 0 40px hsl(0, 100%, 55%, 0.4);
     
     /* Sidebar tokens */
-    --sidebar-background: 216 100% 2%;
+    --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 50 100% 50%;
-    --sidebar-primary-foreground: 216 100% 2%;
-    --sidebar-accent: 216 30% 8%;
+    --sidebar-primary: 0 100% 55%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 12%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 216 30% 12%;
-    --sidebar-ring: 50 100% 50%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 100% 55%;
   }
 
   .dark {

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SkillBar from '../components/SkillBar';
 
 const About = () => {
   const containerVariants = {
@@ -35,6 +36,15 @@ const About = () => {
   };
 
 
+  const skills = [
+    { name: "React & TypeScript", percentage: 90 },
+    { name: "Node.js & Express", percentage: 85 },
+    { name: "Python & Django", percentage: 80 },
+    { name: "MongoDB & PostgreSQL", percentage: 85 },
+    { name: "AWS & Docker", percentage: 75 },
+    { name: "Performance Optimization", percentage: 88 }
+  ];
+
   return (
     <section id="about" className="py-32 min-h-screen flex items-center">
       <div className="container mx-auto px-6">
@@ -43,7 +53,7 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="text-center"
+          className="text-left"
         >
           <motion.div variants={itemVariants} className="mb-16">
             <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
@@ -54,28 +64,45 @@ const About = () => {
             </h2>
           </motion.div>
 
-          {/* Clean F1 Car with subtle animation */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <motion.img 
-              src="/lovable-uploads/0462a144-0ac3-4b88-b9fd-d4abf7e3e187.png"
-              alt="F1 Car" 
-              className="max-w-4xl mx-auto w-full h-auto object-contain"
-              animate={{ 
-                y: [0, -8, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Skills */}
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 tracking-wide">
+                TECHNICAL PERFORMANCE
+              </h3>
+              {skills.map((skill, index) => (
+                <SkillBar 
+                  key={skill.name}
+                  skill={skill.name}
+                  percentage={skill.percentage}
+                  index={index}
+                />
+              ))}
+            </motion.div>
+
+            {/* Right side - F1 Car */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <motion.img 
+                src="/lovable-uploads/0462a144-0ac3-4b88-b9fd-d4abf7e3e187.png"
+                alt="F1 Car" 
+                className="max-w-3xl mx-auto w-full h-auto object-contain"
+                animate={{ 
+                  y: [0, -8, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
