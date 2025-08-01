@@ -62,28 +62,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 z-20">
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-64 h-64 border border-primary/20 rounded-full"
-            style={{
-              top: `${20 + i * 30}%`,
-              left: `${10 + i * 40}%`,
-            }}
-            animate={{
-              rotate: 360,
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 10 + i * 5,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div>
 
       <motion.div
         className="container mx-auto px-6 text-center relative z-30"

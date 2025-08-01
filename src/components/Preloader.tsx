@@ -30,7 +30,8 @@ const Preloader = () => {
     visible: { opacity: 1 },
     exit: {
       opacity: 0,
-      transition: { duration: 0.5 },
+      scale: 1.1,
+      transition: { duration: 0.8 },
     },
   };
 
@@ -55,7 +56,7 @@ const Preloader = () => {
             key={index}
             className={`w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-gray-600 transition-all duration-200 ${
               getLightStatus(index) === 'on' 
-                ? 'bg-yellow-400 shadow-[0_0_30px_#fbbf24] border-yellow-300' 
+                ? 'bg-primary shadow-[0_0_30px_hsl(var(--primary))] border-primary' 
                 : 'bg-gray-700'
             }`}
             initial={{ scale: 0.8, opacity: 0 }}
