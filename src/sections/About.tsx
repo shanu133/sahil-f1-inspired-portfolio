@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import SkillBar from '../components/SkillBar';
 
 const About = () => {
   const containerVariants = {
@@ -16,34 +15,6 @@ const About = () => {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
   };
-
-  const carVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: -100, 
-      scale: 0.8 
-    },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
-      scale: 1,
-      transition: {
-        duration: 1.5,
-        ease: "easeOut",
-        delay: 0.5
-      }
-    },
-  };
-
-
-  const skills = [
-    { name: "React & TypeScript", percentage: 90 },
-    { name: "Node.js & Express", percentage: 85 },
-    { name: "Python & Django", percentage: 80 },
-    { name: "MongoDB & PostgreSQL", percentage: 85 },
-    { name: "AWS & Docker", percentage: 75 },
-    { name: "Performance Optimization", percentage: 88 }
-  ];
 
   return (
     <section id="about" className="py-32 min-h-screen flex items-center">
@@ -74,20 +45,6 @@ const About = () => {
                 <p className="font-body text-lg text-muted-foreground leading-relaxed">
                   I'm inspired by the relentless pursuit of perfection seen in motorsport, and I bring that same energy to every project, aiming to create work that is not only functional but also engaging and innovative.
                 </p>
-              </div>
-              
-              <div className="mt-12">
-                <h3 className="font-heading font-bold text-2xl text-foreground mb-8 tracking-wide">
-                  TECHNICAL PERFORMANCE
-                </h3>
-                {skills.map((skill, index) => (
-                  <SkillBar 
-                    key={skill.name}
-                    skill={skill.name}
-                    percentage={skill.percentage}
-                    index={index}
-                  />
-                ))}
               </div>
             </motion.div>
 

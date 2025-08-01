@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Preloader from './components/Preloader';
 import Hero from './sections/Hero';
 import About from './sections/About';
+import Skills from './sections/Skills';
 import CoreExpertise from './sections/CoreExpertise';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
@@ -31,6 +32,7 @@ const App = () => {
             <main>
               <Hero />
               <About />
+              <Skills />
               <CoreExpertise />
               <Projects />
               <Contact />

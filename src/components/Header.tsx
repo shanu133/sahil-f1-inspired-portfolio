@@ -22,8 +22,18 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Empty right side for clean look */}
-        <div></div>
+        {/* Right side - Navigation sections */}
+        <nav className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
+            <a 
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium tracking-wide hover:scale-105 transform transition-all duration-200"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
       </div>
     </motion.header>
   );
