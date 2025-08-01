@@ -10,7 +10,7 @@ const Preloader = () => {
     const sequence = async () => {
       // Light up one by one
       for (let i = 0; i < 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 400));
         setCurrentPair(i);
       }
       
