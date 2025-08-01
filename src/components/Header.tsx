@@ -28,25 +28,19 @@ const Header = () => {
             <motion.a 
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="relative text-muted-foreground font-medium tracking-wide text-sm py-2 px-1 group"
+              className="relative text-muted-foreground font-body font-medium tracking-wide text-sm py-2 px-1 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-primary font-body">
                 {item}
               </span>
               {/* Underline animation */}
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-primary"
+                className="absolute bottom-1 left-1 right-1 h-0.5 bg-primary"
                 initial={{ width: 0 }}
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-              />
-              {/* Glow effect */}
-              <motion.div
-                className="absolute inset-0 bg-primary/10 rounded-md opacity-0"
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
               />
             </motion.a>
           ))}

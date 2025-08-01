@@ -29,7 +29,7 @@ const Projects = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
             <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
-              <span className="text-primary">03 //</span> PROJECTS
+              <span className="text-primary">04 //</span> PROJECTS
             </span>
             <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
               DEVELOPMENT PIPELINE

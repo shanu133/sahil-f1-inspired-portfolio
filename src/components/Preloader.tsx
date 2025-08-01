@@ -9,15 +9,15 @@ const Preloader = () => {
   useEffect(() => {
     const sequence = async () => {
       // Light up one by one
-      for (let i = 0; i < 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 400));
+    }, 3000); // 3 seconds for the full F1 lights sequence
+        await new Promise(resolve => setTimeout(resolve, 200));
         setCurrentPair(i);
       }
       
       setAllLightsOn(true);
       
       // Brief pause before all lights go out simultaneously
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 500));
       
       setLightsOff(true);
     };

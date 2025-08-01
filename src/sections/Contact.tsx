@@ -45,12 +45,6 @@ const Contact = () => {
       href: "mailto:worksahilsharma@gmail.com"
     },
     {
-      icon: Phone,
-      label: "Phone", 
-      value: "+91 7017340383",
-      href: "tel:+917017340383"
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Dehradun, Uttarakhand",
@@ -69,7 +63,7 @@ const Contact = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
             <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
-              <span className="text-primary">04 //</span> GET IN TOUCH
+              <span className="text-primary">05 //</span> GET IN TOUCH
             </span>
             <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-6 tracking-[1.5px]">
               CONTACT ZONE
