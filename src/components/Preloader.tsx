@@ -9,7 +9,7 @@ const Preloader = () => {
   useEffect(() => {
     const sequence = async () => {
       // Light up one by one
-    }, 3000); // 3 seconds for the full F1 lights sequence
+      for (let i = 0; i < 5; i++) {
         await new Promise(resolve => setTimeout(resolve, 200));
         setCurrentPair(i);
       }
