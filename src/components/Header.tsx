@@ -25,13 +25,30 @@ const Header = () => {
         {/* Right side - Navigation sections */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <a 
+            <motion.a 
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium tracking-wide hover:scale-105 transform transition-all duration-200"
+              className="relative text-muted-foreground font-medium tracking-wide text-sm py-2 px-1 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {item}
-            </a>
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">
+                {item}
+              </span>
+              {/* Underline animation */}
+              <motion.div
+                className="absolute bottom-0 left-0 h-0.5 bg-primary"
+                initial={{ width: 0 }}
+                whileHover={{ width: "100%" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              />
+              {/* Glow effect */}
+              <motion.div
+                className="absolute inset-0 bg-primary/10 rounded-md opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              />
+            </motion.a>
           ))}
         </nav>
       </div>
