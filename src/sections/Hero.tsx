@@ -83,7 +83,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="font-heading font-black text-6xl md:text-8xl lg:text-9xl text-foreground leading-tight tracking-[1.5px]"
+            className="font-heading font-black text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight tracking-[1.5px]"
           >
             <motion.span 
               className="block"
@@ -142,6 +142,10 @@ const Hero = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="text-primary cursor-pointer"
+            onClick={() => {
+              const aboutSection = document.getElementById('about');
+              aboutSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             <ChevronDown size={32} />
           </motion.div>

@@ -22,28 +22,8 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Right side - Navigation sections */}
-        <div className="flex items-center gap-8">
-          <motion.div 
-            className="font-heading font-bold text-xl text-foreground tracking-wider"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            SAHIL SHARMA
-          </motion.div>
-          <nav className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
-              <a 
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium tracking-wide"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-        </div>
+        {/* Empty right side for clean look */}
+        <div></div>
       </div>
     </motion.header>
   );

@@ -57,27 +57,38 @@ const About = () => {
         >
           <motion.div variants={itemVariants} className="mb-16">
             <span className="font-body text-primary font-medium text-lg tracking-[1.5px] mb-4 block">
-              <span className="text-primary">01 //</span> DRIVER PROFILE
+              <span className="text-primary">01 //</span> ABOUT ME
             </span>
             <h2 className="font-heading font-black text-4xl md:text-5xl text-foreground mb-6 tracking-[1.5px]">
-              PERFORMANCE PROFILE
+              DRIVER PROFILE
             </h2>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left side - Skills */}
+            {/* Left side - About Me Text */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="font-heading font-bold text-2xl text-foreground mb-8 tracking-wide">
-                TECHNICAL PERFORMANCE
-              </h3>
-              {skills.map((skill, index) => (
-                <SkillBar 
-                  key={skill.name}
-                  skill={skill.name}
-                  percentage={skill.percentage}
-                  index={index}
-                />
-              ))}
+              <div className="space-y-6">
+                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                  Currently in my final year of a B.Tech at DIT University, my work is fueled by a genuine passion for technology and design. For me, it's not just about writing code or creating layouts; it's about crafting experiences.
+                </p>
+                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                  I'm inspired by the relentless pursuit of perfection seen in motorsport, and I bring that same energy to every project, aiming to create work that is not only functional but also engaging and innovative.
+                </p>
+              </div>
+              
+              <div className="mt-12">
+                <h3 className="font-heading font-bold text-2xl text-foreground mb-8 tracking-wide">
+                  TECHNICAL PERFORMANCE
+                </h3>
+                {skills.map((skill, index) => (
+                  <SkillBar 
+                    key={skill.name}
+                    skill={skill.name}
+                    percentage={skill.percentage}
+                    index={index}
+                  />
+                ))}
+              </div>
             </motion.div>
 
             {/* Right side - F1 Car */}
