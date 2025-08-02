@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, ArrowLeft } from 'lucide-react';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -98,6 +98,16 @@ const Header = () => {
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-border">
+                  <motion.button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    whileHover={{ x: -5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span className="font-body text-sm">Back</span>
+                  </motion.button>
+                  
                   <div className="flex items-center gap-3">
                     <div className="text-primary font-heading font-bold text-lg tracking-wider">
                       SS

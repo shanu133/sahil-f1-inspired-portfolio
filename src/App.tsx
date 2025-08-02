@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 6000); // 6 seconds for the full F1 lights sequence
+    }, 4000); // 4 seconds for the full F1 lights sequence
 
     return () => clearTimeout(timer);
   }, []);

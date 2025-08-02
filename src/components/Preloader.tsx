@@ -5,21 +5,24 @@ const Preloader = () => {
   const [currentPair, setCurrentPair] = useState(-1);
   const [allLightsOn, setAllLightsOn] = useState(false);
   const [lightsOff, setLightsOff] = useState(false);
+  const [currentText, setCurrentText] = useState('STARTING SEQUENCE');
 
   useEffect(() => {
     const sequence = async () => {
       // Light up one by one
       for (let i = 0; i < 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 200));
+        await new Promise(resolve => setTimeout(resolve, 300));
         setCurrentPair(i);
       }
       
       setAllLightsOn(true);
+      setCurrentText('ALL LIGHTS ON');
       
       // Brief pause before all lights go out simultaneously
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 800));
       
       setLightsOff(true);
+      setCurrentText('LIGHTS OUT AND AWAY WE GO...');
     };
 
     sequence();
@@ -68,7 +71,7 @@ const Preloader = () => {
 
       <div className="text-center">
         <p className="font-body text-white text-xl tracking-wider font-bold">
-          {!allLightsOn ? 'STARTING SEQUENCE' : lightsOff ? 'LIGHTS OUT AND AWAY WE GO...' : 'ALL LIGHTS ON'}
+          {currentText}
         </p>
       </div>
     </motion.div>
