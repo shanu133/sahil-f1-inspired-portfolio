@@ -80,24 +80,21 @@ const Hero = () => {
 
         <div className="mb-6">
           <motion.h1
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
             className="font-heading font-black text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight tracking-[1.5px]"
           >
             <motion.span 
               className="block"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+              initial={{ rotateY: 90, opacity: 0 }}
+              animate={{ rotateY: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             >
               SAHIL
             </motion.span>
             <motion.span 
               className="block text-primary"
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+              initial={{ rotateY: -90, opacity: 0 }}
+              animate={{ rotateY: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
             >
               SHARMA
             </motion.span>
