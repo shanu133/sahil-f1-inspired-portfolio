@@ -13,13 +13,35 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Left side - SS and F1 logo */}
         <div className="flex items-center gap-4">
-          <div className="text-primary font-heading font-bold text-xl tracking-wider">
+          <motion.div 
+            className="text-primary font-heading font-bold text-xl tracking-wider"
+            animate={{ 
+              textShadow: [
+                "0 0 0px hsl(var(--primary))",
+                "0 0 10px hsl(var(--primary))",
+                "0 0 0px hsl(var(--primary))"
+              ]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
             SS
-          </div>
+          </motion.div>
           <div className="h-6 w-px bg-border"></div>
-          <div className="text-muted-foreground font-mono text-sm">
+          <motion.div 
+            className="text-muted-foreground font-mono text-sm"
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
             F1®
-          </div>
+          </motion.div>
         </div>
         
         {/* Right side - Navigation sections */}
@@ -35,11 +57,11 @@ const Header = () => {
               <span className="relative z-10 transition-colors duration-300 group-hover:text-primary font-body">
                 {item}
               </span>
-              {/* Underline animation */}
+              {/* Underline animation - grows from center */}
               <motion.div
-                className="absolute bottom-1 left-1 right-1 h-0.5 bg-primary"
+                className="absolute bottom-1 left-1/2 h-0.5 bg-primary transform -translate-x-1/2"
                 initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
+                whileHover={{ width: "calc(100% - 8px)" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               />
             </motion.a>

@@ -48,7 +48,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Right side - F1 Car */}
+            {/* Right side - F1 Car and Social Links */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -69,6 +69,43 @@ const About = () => {
                   ease: "easeInOut"
                 }}
               />
+              
+              {/* Social Media Links */}
+              <motion.div 
+                className="flex justify-center gap-6 mt-8"
+                variants={itemVariants}
+              >
+                <motion.a
+                  href="https://www.linkedin.com/in/sahil-sharma-5a3715270/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-card border border-border rounded-lg text-foreground font-body font-medium hover:border-primary/50 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  LinkedIn
+                </motion.a>
+                <motion.a
+                  href="https://github.com/shanu133/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-card border border-border rounded-lg text-foreground font-body font-medium hover:border-primary/50 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  GitHub
+                </motion.a>
+                <motion.a
+                  href="https://x.com/theonlysahil1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-card border border-border rounded-lg text-foreground font-body font-medium hover:border-primary/50 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Twitter
+                </motion.a>
+              </motion.div>
             </motion.div>
           </div>
         </motion.div>

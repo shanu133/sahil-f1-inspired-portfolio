@@ -18,11 +18,11 @@ const Skills = () => {
   };
 
   const frontendSkills = [
-    { skill: "React.js", percentage: 95 },
-    { skill: "TypeScript", percentage: 90 },
-    { skill: "Next.js", percentage: 88 },
-    { skill: "Tailwind CSS", percentage: 92 },
-    { skill: "JavaScript ES6+", percentage: 94 },
+    { skill: "React.js", percentage: 89 },
+    { skill: "Java Programming", percentage: 86 },
+    { skill: "Next.js", percentage: 84 },
+    { skill: "Tailwind CSS", percentage: 88 },
+    { skill: "JavaScript ES6+", percentage: 90 },
   ];
 
   const backendSkills = [
@@ -30,15 +30,15 @@ const Skills = () => {
     { skill: "Express.js", percentage: 88 },
     { skill: "MongoDB", percentage: 85 },
     { skill: "PostgreSQL", percentage: 82 },
-    { skill: "GraphQL", percentage: 78 },
+    { skill: "REST APIs", percentage: 76 },
   ];
 
   const toolsSkills = [
     { skill: "Git & GitHub", percentage: 95 },
+    { skill: "Webpack/Vite", percentage: 88 },
+    { skill: "Vertex AI (Google Cloud)", percentage: 84 },
     { skill: "Docker", percentage: 80 },
     { skill: "AWS", percentage: 75 },
-    { skill: "Jest Testing", percentage: 85 },
-    { skill: "Webpack/Vite", percentage: 88 },
   ];
 
   return (
