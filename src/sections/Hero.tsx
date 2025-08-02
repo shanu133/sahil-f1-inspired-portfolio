@@ -118,17 +118,20 @@ const Hero = () => {
             className="px-6 py-3 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-primary)] tracking-[1.5px]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
           >
             VIEW PROJECTS
           </motion.button>
           
-          <motion.button
-            className="px-6 py-3 border-2 border-primary text-primary font-body font-semibold text-sm rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px]"
+          <motion.a
+            href="/Sahil_Sharma_Resume.pdf"
+            download="Sahil_Sharma_Resume.pdf"
+            className="px-6 py-3 border-2 border-primary text-primary font-body font-semibold text-sm rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-[1.5px] inline-block"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             DOWNLOAD CV
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <motion.div

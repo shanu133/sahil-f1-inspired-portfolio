@@ -44,13 +44,13 @@ const App = () => {
                 <div className="text-center space-y-6">
                   {/* Social Links */}
                   <div className="flex justify-center gap-6">
-                    <a href="#" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
+                    <a href="https://github.com/shanu133/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
                       <Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                     </a>
-                    <a href="#" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
+                    <a href="https://www.linkedin.com/in/sahil-sharma-5a3715270/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
                       <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                     </a>
-                    <a href="#" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
+                    <a href="https://x.com/theonlysahil1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors">
                       <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                     </a>
                   </div>
