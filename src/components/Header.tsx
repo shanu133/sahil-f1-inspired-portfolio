@@ -132,7 +132,7 @@ const Header = () => {
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ x: 10 }}
                       >
-                        <span className="text-primary font-mono text-sm mr-3">
+                        <span className="text-primary font-mono text-base mr-3">
                           {String(index + 1).padStart(2, '0')} //
                         </span>
                         {item.toUpperCase()}
