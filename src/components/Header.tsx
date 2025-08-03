@@ -121,12 +121,12 @@ const Header = () => {
 
                 {/* Navigation Items */}
                 <nav className="flex-1 px-6 py-8">
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     {navItems.map((item, index) => (
                       <motion.button
                         key={item}
                         onClick={() => handleNavClick(item)}
-                        className="block w-full text-left text-foreground font-body font-medium text-lg py-3 px-4 rounded-lg hover:bg-card hover:text-primary transition-all duration-300 bg-transparent border-none cursor-pointer"
+                        className="block w-full text-left text-foreground font-body font-medium text-base py-4 px-4 rounded-lg hover:bg-card hover:text-primary transition-all duration-300 bg-transparent border-none cursor-pointer"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
