@@ -107,7 +107,7 @@ const Hero = () => {
         >
           Full-Stack Developer & Performance Engineer
           <br />
-          <span className="text-primary font-medium">Engineered for performance. Designed with passion</span>
+          <span className="text-primary font-medium">Engineered for performance, Designed with passion</span>
         </motion.p>
 
         <motion.div
