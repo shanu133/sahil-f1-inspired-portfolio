@@ -40,10 +40,10 @@ const About = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="space-y-6">
                 <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                  Currently in my final year of a B.Tech at DIT University, my work is fueled by a genuine passion for technology and design. For me, it's not just about writing code or creating layouts; it's about crafting experiences.
+                  As a final-year B.Tech student at DIT University, I build with both code and creativity. I'm passionate about crafting digital experiences that are not only functional but also engaging and innovative.
                 </p>
                 <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                  I'm inspired by the relentless pursuit of perfection seen in motorsport, and I bring that same energy to every project, aiming to create work that is not only functional but also engaging and innovative.
+                  Outside of the IDE, you'll often find me listening music, exploring nature, or getting lost in a good book. This blend of analytical thinking and creative curiosity is what I bring to every project, inspired by the same relentless pursuit of perfection seen in motorsport. I don't just build things—I build them with energy and purpose.
                 </p>
               </div>
             </motion.div>
