@@ -9,9 +9,12 @@ const Preloader = () => {
 
   useEffect(() => {
     const sequence = async () => {
+      // Initial delay
+      await new Promise(resolve => setTimeout(resolve, 200));
+      
       // Light up one by one
       for (let i = 0; i < 5; i++) {
-        await new Promise(resolve => setTimeout(resolve, 300));
+        await new Promise(resolve => setTimeout(resolve, 250));
         setCurrentPair(i);
       }
       
@@ -19,10 +22,13 @@ const Preloader = () => {
       setCurrentText('ALL LIGHTS ON');
       
       // Brief pause before all lights go out simultaneously
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve, 600));
       
       setLightsOff(true);
       setCurrentText('LIGHTS OUT AND AWAY WE GO...');
+      
+      // Final pause before exit
+      await new Promise(resolve => setTimeout(resolve, 400));
     };
 
     sequence();
