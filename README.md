@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🏎️ Sahil’s Formula One Inspired Portfolio
 
-**URL**: https://lovable.dev/projects/eaa9a4d8-7f7e-4a0b-b38b-500c99f1f1e2
+Welcome to my **personal portfolio website** — a project where I merged my love for **Formula 1, Ferrari-inspired design, and technology**.
+It’s not just a website, but a **pit stop for my journey in tech, design, and open source** 🚀
 
-## How can I edit this code?
+🌐 **Live Site:** [sahilportfolio-omega.vercel.app](https://sahilportfolio-omega.vercel.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ⚡ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eaa9a4d8-7f7e-4a0b-b38b-500c99f1f1e2) and start prompting.
+Built with a **modern front-end stack** to keep performance as fast as an F1 car:
 
-Changes made via Lovable will be committed automatically to this repo.
+* [Vite](https://vitejs.dev/) – Lightning-fast build tool
+* [React](https://react.dev/) – Component-based UI
+* [TypeScript](https://www.typescriptlang.org/) – Strongly typed code
+* [Tailwind CSS](https://tailwindcss.com/) – Sleek, utility-first styling
+* [shadcn/ui](https://ui.shadcn.com/) – Accessible, customizable UI components
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🏁 Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✅ **Formula 1 / Ferrari-inspired design** with bold colors & speed vibes
+✅ Fully **responsive** across all devices
+✅ **Smooth animations** for a dynamic experience
+✅ Easy to **customize & extend** for future projects
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+If you’d like to run this project locally:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/shanu133/sahil-portfolio.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Navigate into the project directory
+cd sahil-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will now be running at **[http://localhost:5173/](http://localhost:5173/)**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📦 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is deployed on **Vercel**.
+Any push to the main branch automatically goes live 🟢.
 
-## What technologies are used for this project?
+To deploy your own version:
 
-This project is built with:
+1. Fork this repo
+2. Push to your GitHub
+3. Import into [Vercel](https://vercel.com/)
+4. Hit deploy 🚀
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 👨‍💻 About Me
 
-Simply open [Lovable](https://lovable.dev/projects/eaa9a4d8-7f7e-4a0b-b38b-500c99f1f1e2) and click on Share -> Publish.
+I’m **Sahil Sharma**, a developer & designer passionate about:
 
-## Can I connect a custom domain to my Lovable project?
+* Building **modern, aesthetic, and fast** web apps
+* Exploring the **intersection of design + AI + open source**
+* Contributing to communities & leading collaborations
 
-Yes, you can!
+This portfolio reflects both my **technical work** and my **design identity**.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📬 Connect with Me
+
+* GitHub: [@shanu133](https://github.com/shanu133)
+* LinkedIn: [Sahil Sharma](https://www.linkedin.com/in/sahil-sharma-5a3715270/)
+* Portfolio: [sahilportfolio-omega.vercel.app](https://sahilportfolio-omega.vercel.app)
+
+---
+
+🔥 Fast cars, fast code — welcome to my world!
+
+---
+
+
